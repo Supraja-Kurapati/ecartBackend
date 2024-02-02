@@ -66,7 +66,7 @@ const login=async(req,res)=>{
     if(login){
         const token=jwt.sign({user:data.email},secretkey,{expiresIn:'3d'})
         console.log(login,"login");
-     return res.send({msg:"Login Successful!"})
+     return res.send({msg:"Login Successful!",token:token})
     }
     else{
         return res.send({msg:"Password Incorrect"})
