@@ -1,6 +1,6 @@
 const express= require('express')
 const app=express()
-const {route}=require("./Routes/route")
+const route=require("./Routes/route")
 const cors=require('cors')
 const {connection}=require('./Config/db')
 app.use(cors({
