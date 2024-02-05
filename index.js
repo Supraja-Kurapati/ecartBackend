@@ -9,7 +9,9 @@ app.use(cors({
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use('/api',route)
+
 app.listen(5132,()=>{
+
     console.log("Server working");
     connection();
     console.log("Connected To Database");

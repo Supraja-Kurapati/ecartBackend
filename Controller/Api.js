@@ -1,8 +1,8 @@
 
 //atlas
 const bcrypt=require('bcryptjs')
-const secretkey="7ken"
 const jwt=require('jsonwebtoken')
+const secretkey="ECOM"
 const saltRound=10;
 
 const {databasename}=require('../Config/db')
