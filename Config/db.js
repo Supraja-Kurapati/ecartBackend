@@ -29,5 +29,6 @@ console.log("Connected to database from db.js");
 }
 
 const databasename=client.db("random")
+// const dbnametwo=client.db("Products")
 module.exports={connection,databasename}
 

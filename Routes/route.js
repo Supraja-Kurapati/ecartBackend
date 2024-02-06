@@ -5,7 +5,7 @@ const store=require('../store')
 const{register,login}=require('../Controller/Api')
 
 route.get('/store',store)
-
+// route.get('/:id',storeid)
 
 route.post('/register',register)
 route.post('/login',login)

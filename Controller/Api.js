@@ -7,7 +7,7 @@ const saltRound=10;
 
 const {databasename}=require('../Config/db')
 const newCollection=databasename.collection("Details")
-
+const Products=databasename.collection("products")
 const register = async (req,res)=>{
     data=req.body
     console.log(data);
@@ -43,5 +43,20 @@ else{
     return res.send({msg:"You Haven't Registered Yet"})
 }
 }
+
+// const storeid=async(req,res)=>{
+//     try{
+//         id=req.params.id;
+//         const product=await Products.findOne({id})
+//         if(!product){
+//             return res.status(404).send({msg:'product not found'})
+//         }
+//         res.send(product)
+//     }
+//     catch(err){
+//         console.error('error in fetching',err)
+//         res.status(500).send({msg:'internal server error'})
+//     }
+// }
 
 module.exports={register,login}
